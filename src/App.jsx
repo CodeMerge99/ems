@@ -3,9 +3,6 @@ import Login from './components/Auth/Login'
 import EmployeeDashboard from './components/Dashboard/EmployeeDashboard'
 import AdminDashboard from './components/Dashboard/AdminDashboard'
 import { AuthContext } from './context/AuthProvider'
-import { setLocaStorage} from './utils/localStorage'
-
-
 
 const App = () => {
 
@@ -18,7 +15,7 @@ const App = () => {
     
     if(loggedInUser){
       const userData = JSON.parse(loggedInUser)
-      SetUser(userData.role)
+      setUser(userData.role)
       setLoggedInUserData(userData.data)
     }
 
@@ -52,4 +49,5 @@ const App = () => {
   )
 }
 
-export default App
+
+export default App;
